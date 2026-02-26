@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "drgfuse"
+version = "0.1.0"
+description = "Anonymized DRGFuse fusion-side code snapshot"
+requires-python = ">=3.9"
+readme = "README.md"
+license = {file = "LICENSE"}
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

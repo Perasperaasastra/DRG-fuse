@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+
+# Logs / outputs (not part of the anonymized snapshot)
+outputs/
+runs/
+logs/
+
+# Large artifacts (keep the provided toy checkpoint only)
+checkpoints/*
+!checkpoints/toy_model.pt
+!checkpoints/README.md
+
+# Data (raw data must not be committed)
+data/raw/
+data/private/
+*.nii.gz
+*.svs
+*.tif
+*.tiff
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS / IDE
+.DS_Store
+.idea/
+.vscode/
+
+# GitHub / CI (do not include in anonymized review snapshot)
+.github/
