@@ -1,0 +1,54 @@
+seed: 0
+
+data:
+  root: data/example
+  train_split: train
+  val_split: val
+  test_splits:
+    - test_internal
+    - test_externalA
+    - test_externalB
+
+model:
+  d_ct_token: 64
+  d_wsi_token: 128
+  d_ct_global: 64
+  d_wsi_global: 128
+  q_ct_dim: 8
+  q_wsi_dim: 6
+  d_model: 64
+  d_delta: 32
+  n_layers: 2
+  n_heads: 4
+  dropout: 0.1
+
+train:
+  batch_size: 8
+  num_workers: 0
+  epochs: 5
+  lr: 0.0003
+  weight_decay: 0.01
+  amp: false
+  grad_clip_norm: 1.0
+  # If null, computed from train split.
+  pos_weight: null
+
+loss:
+  beta_low_fpr: 0.05
+  ot_eps: 0.05
+  ot_iters: 20
+  weights:
+    bce: 1.0
+    low_fpr: 0.1
+    ot: 0.0
+    mmd: 0.0
+    gate_entropy: 0.001
+    gate_balance: 0.001
+  coteach:
+    enable: false
+    noise_rate: 0.2
+    warmup_epochs: 5
+    mismatch_gamma: 1.0
+
+output:
+  dir: outputs/toy_run
