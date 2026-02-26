@@ -1,0 +1,87 @@
+\begin{table*}[htbp]
+\centering
+\small
+\caption{Quantitative comparison with state-of-the-art methods on three datasets. The best results are bolded.}
+\label{tab:main_results}
+\setlength{\tabcolsep}{0.6pt}
+
+\newcommand{\main}[1]{{\fontsize{7}{9.6}\selectfont #1}}
+\newcommand{\err}[1]{{\fontsize{4}{6}\selectfont \raisebox{0.2ex}{#1}}}
+\makebox[\textwidth][c]{
+\begin{tabular}{c|c|ccc|ccc|ccc}
+\hline
+\multicolumn{2}{c|}{\multirow{2}{*}{{\scriptsize \bfseries Method}}} & \multicolumn{3}{c|}{{\scriptsize \bfseries Internal}} & \multicolumn{3}{c|}{{\scriptsize \bfseries External A}} & \multicolumn{3}{c}{{\scriptsize \bfseries External B}} \\
+\cline{3-11}
+\multicolumn{2}{c|}{} & {\scriptsize \bfseries AUC$\uparrow$} & {\scriptsize \bfseries pAUCn$\uparrow$} & {\scriptsize \bfseries TPR@Sp95$\uparrow$} & {\scriptsize \bfseries AUC$\uparrow$} & {\scriptsize \bfseries pAUCn$\uparrow$} & {\scriptsize \bfseries TPR@Sp95$\uparrow$} & {\scriptsize \bfseries AUC$\uparrow$} & {\scriptsize \bfseries pAUCn$\uparrow$} & {\scriptsize \bfseries TPR@Sp95$\uparrow$} \\
+\hline
+\multicolumn{2}{c|}{\makecell[l]{{\scriptsize Rad+XGB }}}       
+    & \main{$0.611$}\err{$\pm0.031$} & \main{$0.282$}\err{$\pm0.050$} & \main{$0.184$}\err{$\pm0.054$}
+    & \main{$0.564$}\err{$\pm0.061$} & \main{$0.224$}\err{$\pm0.078$} & \main{$0.141$}\err{$\pm0.076$}
+    & \main{$0.570$}\err{$\pm0.051$} & \main{$0.231$}\err{$\pm0.068$} & \main{$0.157$}\err{$\pm0.065$} \\[-4pt]
+\multicolumn{2}{c|}{\makecell[l]{{\scriptsize 3D CNN+MG \cite{ModelsGenesis2019}}}}          
+    & \main{$0.640$}\err{$\pm0.029$} & \main{$0.324$}\err{$\pm0.049$} & \main{$0.225$}\err{$\pm0.058$}
+    & \main{$0.590$}\err{$\pm0.061$} & \main{$0.268$}\err{$\pm0.080$} & \main{$0.183$}\err{$\pm0.083$}
+    & \main{$0.605$}\err{$\pm0.052$} & \main{$0.277$}\err{$\pm0.073$} & \main{$0.191$}\err{$\pm0.071$} \\[-4pt]
+\multicolumn{2}{c|}{\makecell[l]{{\scriptsize OmniCT \cite{OmniCT2026}}}}             
+    & \main{$0.661$}\err{$\pm0.021$} & \main{$0.353$}\err{$\pm0.052$} & \main{$0.257$}\err{$\pm0.065$}
+    & \main{$0.618$}\err{$\pm0.051$} & \main{$0.290$}\err{$\pm0.083$} & \main{$0.215$}\err{$\pm0.088$}
+    & \main{$0.620$}\err{$\pm0.049$} & \main{$0.303$}\err{$\pm0.071$} & \main{$0.220$}\err{$\pm0.070$} \\[-4pt]
+\multicolumn{2}{c|}{\makecell[l]{{\scriptsize CT-FM \cite{CTFM2025}}}}              
+    & \main{$0.671$}\err{$\pm0.030$} & \main{$0.395$}\err{$\pm0.051$} & \main{$0.300$}\err{$\pm0.062$}
+    & \main{$0.633$}\err{$\pm0.054$} & \main{$0.332$}\err{$\pm0.080$} & \main{$0.252$}\err{$\pm0.079$}
+    & \main{$0.620$}\err{$\pm0.051$} & \main{$0.320$}\err{$\pm0.068$} & \main{$0.242$}\err{$\pm0.072$} \\[-4pt]
+\multicolumn{2}{c|}{\makecell[l]{{\scriptsize VR+VM3D \cite{VoxelRadVisionMamba2025}}}} 
+    & \main{$0.690$}\err{$\pm0.035$} & \main{$0.393$}\err{$\pm0.044$} & \main{$0.312$}\err{$\pm0.052$}
+    & \main{$0.661$}\err{$\pm0.042$} & \main{$0.327$}\err{$\pm0.082$} & \main{$0.249$}\err{$\pm0.081$}
+    & \main{$0.658$}\err{$\pm0.043$} & \main{$0.324$}\err{$\pm0.077$} & \main{$0.244$}\err{$\pm0.065$} \\
+\hline
+\multicolumn{2}{c|}{\makecell[l]{{\scriptsize ABMIL \cite{ABMIL2018}}}}               
+    & \main{$0.621$}\err{$\pm0.039$} & \main{$0.303$}\err{$\pm0.058$} & \main{$0.201$}\err{$\pm0.073$}
+    & \main{$0.560$}\err{$\pm0.072$} & \main{$0.234$}\err{$\pm0.089$} & \main{$0.156$}\err{$\pm0.091$}
+    & \main{$0.552$}\err{$\pm0.071$} & \main{$0.221$}\err{$\pm0.090$} & \main{$0.263$}\err{$\pm0.089$} \\[-4pt]
+\multicolumn{2}{c|}{\makecell[l]{{\scriptsize CLAM \cite{CLAM2021}}}}                
+    & \main{$0.654$}\err{$\pm0.041$} & \main{$0.341$}\err{$\pm0.061$} & \main{$0.242$}\err{$\pm0.070$}
+    & \main{$0.599$}\err{$\pm0.071$} & \main{$0.274$}\err{$\pm0.088$} & \main{$0.191$}\err{$\pm0.092$}
+    & \main{$0.580$}\err{$\pm0.071$} & \main{$0.265$}\err{$\pm0.087$} & \main{$0.189$}\err{$\pm0.093$} \\[-4pt]
+\multicolumn{2}{c|}{\makecell[l]{{\scriptsize TransMIL \cite{TransMIL2021}}}}            
+    & \main{$0.660$}\err{$\pm0.028$} & \main{$0.350$}\err{$\pm0.051$} & \main{$0.253$}\err{$\pm0.062$}
+    & \main{$0.605$}\err{$\pm0.059$} & \main{$0.284$}\err{$\pm0.077$} & \main{$0.201$}\err{$\pm0.081$}
+    & \main{$0.598$}\err{$\pm0.061$} & \main{$0.274$}\err{$\pm0.082$} & \main{$0.198$}\err{$\pm0.080$} \\[-4pt]
+\multicolumn{2}{c|}{\makecell[l]{{\scriptsize PathFM+LMIL \cite{UNI2024}}}}    
+    & \main{$0.692$}\err{$\pm0.033$} & \main{$0.424$}\err{$\pm0.047$} & \main{$0.331$}\err{$\pm0.060$}
+    & \main{$0.641$}\err{$\pm0.056$} & \main{$0.354$}\err{$\pm0.081$} & \main{$0.270$}\err{$\pm0.075$}
+    & \main{$0.638$}\err{$\pm0.062$} & \main{$0.330$}\err{$\pm0.082$} & \main{$0.251$}\err{$\pm0.079$} \\[-4pt]
+\multicolumn{2}{c|}{\makecell[l]{{\scriptsize ASMIL \cite{ASMIL2026}}}}              
+    & \main{$0.695$}\err{$\pm0.030$} & \main{$0.395$}\err{$\pm0.049$} & \main{$0.300$}\err{$\pm0.063$}
+    & \main{$0.635$}\err{$\pm0.062$} & \main{$0.325$}\err{$\pm0.078$} & \main{$0.245$}\err{$\pm0.082$}
+    & \main{$0.620$}\err{$\pm0.059$} & \main{$0.312$}\err{$\pm0.078$} & \main{$0.235$}\err{$\pm0.082$} \\
+\hline
+\multicolumn{2}{c|}{\makecell[l]{{\scriptsize Late Fusion}}}            
+    & \main{$0.701$}\err{$\pm0.028$} & \main{$0.462$}\err{$\pm0.053$} & \main{$0.391$}\err{$\pm0.066$}
+    & \main{$0.645$}\err{$\pm0.052$} & \main{$0.362$}\err{$\pm0.084$} & \main{$0.293$}\err{$\pm0.077$}
+    & \main{$0.641$}\err{$\pm0.052$} & \main{$0.352$}\err{$\pm0.083$} & \main{$0.288$}\err{$\pm0.080$} \\[-4pt]
+\multicolumn{2}{c|}{\makecell[l]{{\scriptsize GMU  \cite{GMU2017}}}}   
+    & \main{$0.711$}\err{$\pm0.030$} & \main{$0.483$}\err{$\pm0.051$} & \main{$0.410$}\err{$\pm0.059$}
+    & \main{$0.670$}\err{$\pm0.049$} & \main{$0.383$}\err{$\pm0.081$} & \main{$0.311$}\err{$\pm0.082$}
+    & \main{$0.669$}\err{$\pm0.048$} & \main{$0.373$}\err{$\pm0.084$} & \main{$0.307$}\err{$\pm0.085$} \\[-4pt]
+\multicolumn{2}{c|}{\makecell[l]{{\scriptsize SMuRF \cite{SMuRF2025}}}}              
+    & \main{$0.720$}\err{$\pm0.029$} & \main{$0.503$}\err{$\pm0.055$} & \main{$0.436$}\err{$\pm0.060$}
+    & \main{$0.683$}\err{$\pm0.050$} & \main{$0.401$}\err{$\pm0.082$} & \main{$0.335$}\err{$\pm0.085$}
+    & \main{$0.690$}\err{$\pm0.055$} & \main{$0.391$}\err{$\pm0.081$} & \main{$0.320$}\err{$\pm0.082$} \\[-4pt]
+\multicolumn{2}{c|}{\makecell[l]{{\scriptsize eSPARK \cite{eSPARK2025}}}}             
+    & \main{$0.733$}\err{$\pm0.033$} & \main{$0.512$}\err{$\pm0.052$} & \main{$0.441$}\err{$\pm0.058$}
+    & \main{$0.709$}\err{$\pm0.052$} & \main{$0.412$}\err{$\pm0.080$} & \main{$0.341$}\err{$\pm0.083$}
+    & \main{$0.707$}\err{$\pm0.051$} & \main{$0.402$}\err{$\pm0.080$} & \main{$0.336$}\err{$\pm0.084$} \\[-4pt]
+\multicolumn{2}{c|}{\makecell[l]{{\scriptsize CTF \cite{CTF2026}}}}                
+    & \main{$0.742$}\err{$\pm0.025$} & \main{$0.526$}\err{$\pm0.055$} & \main{$0.454$}\err{$\pm0.061$}
+    & \main{$0.705$}\err{$\pm0.048$} & \main{$0.423$}\err{$\pm0.082$} & \main{$0.346$}\err{$\pm0.080$}
+    & \main{$0.708$}\err{$\pm0.050$} & \main{$0.412$}\err{$\pm0.082$} & \main{$0.344$}\err{$\pm0.082$} \\
+\hline
+\multicolumn{2}{c|}{{\scriptsize \bfseries Full DRGFuse}}     
+    & {\boldmath\bfseries\main{$0.762$}}{\boldmath\bfseries\err{$\pm0.018$}} & {\boldmath\bfseries\main{$0.602$}}{\boldmath\bfseries\err{$\pm0.042$}} & {\boldmath\bfseries\main{$0.541$}}{\boldmath\bfseries\err{$\pm0.050$}}
+    & {\boldmath\bfseries\main{$0.720$}}{\boldmath\bfseries\err{$\pm0.039$}} & {\boldmath\bfseries\main{$0.542$}}{\boldmath\bfseries\err{$\pm0.062$}} & {\boldmath\bfseries\main{$0.456$}}{\boldmath\bfseries\err{$\pm0.072$}}
+    & {\boldmath\bfseries\main{$0.713$}}{\boldmath\bfseries\err{$\pm0.044$}} & {\boldmath\bfseries\main{$0.525$}}{\boldmath\bfseries\err{$\pm0.072$}} & {\boldmath\bfseries\main{$0.433$}}{\boldmath\bfseries\err{$\pm0.068$}} \\
+\hline
+\end{tabular}
+}
+\end{table*}

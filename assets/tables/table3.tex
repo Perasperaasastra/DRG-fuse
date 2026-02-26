@@ -1,0 +1,46 @@
+\begin{table}[htbp]
+\centering
+\caption{Ablation study of key components in DRGFuse.}
+\label{tab:ablation}
+\small
+\setlength{\tabcolsep}{1pt}
+
+
+\providecommand{\main}[1]{{\fontsize{8}{9.6}\selectfont #1}}
+\providecommand{\err}[1]{{\fontsize{5}{5}\selectfont \raisebox{0.2ex}{#1}}}
+\makebox[\textwidth][c]{
+\begin{tabular}{c|c|ccc|ccc|ccc}
+\hline
+\multicolumn{2}{c|}{\multirow{2}{*}{{\scriptsize \bfseries Method}}} & \multicolumn{3}{c|}{{\scriptsize \bfseries Internal}} & \multicolumn{3}{c|}{{\scriptsize \bfseries External A}} & \multicolumn{3}{c}{{\scriptsize \bfseries External B}} \\
+\cline{3-11}
+\multicolumn{2}{c|}{} & {\scriptsize \bfseries AUC$\uparrow$} & {\scriptsize \bfseries pAUCn$\uparrow$} & {\scriptsize \bfseries TPR@Sp95$\uparrow$} & {\scriptsize \bfseries AUC$\uparrow$} & {\scriptsize \bfseries pAUCn$\uparrow$} & {\scriptsize \bfseries TPR@Sp95$\uparrow$} & {\scriptsize \bfseries AUC$\uparrow$} & {\scriptsize \bfseries pAUCn$\uparrow$} & {\scriptsize \bfseries TPR@Sp95$\uparrow$} \\
+\hline
+\multicolumn{2}{c|}{\makecell[l]{{\scriptsize w/o mismatch\\[-4pt] \scriptsize -aware co-teaching}}} 
+    & \main{$0.751$}\err{$\pm0.023$} & \main{$0.541$}\err{$\pm0.046$} & \main{$0.464$}\err{$\pm0.058$}
+    & \main{$0.712$}\err{$\pm0.042$} & \main{$0.422$}\err{$\pm0.081$} & \main{$0.311$}\err{$\pm0.082$}
+    & \main{$0.708$}\err{$\pm0.044$} & \main{$0.405$}\err{$\pm0.080$} & \main{$0.297$}\err{$\pm0.079$} \\[-4pt]
+\multicolumn{2}{c|}{\makecell[l]{{\scriptsize w/o low-FPR \\[-4pt] \scriptsize objective  (WBCE only)}}} 
+    & \main{$0.755$}\err{$\pm0.025$} & \main{$0.507$}\err{$\pm0.047$} & \main{$0.425$}\err{$\pm0.060$}
+    & \main{$0.710$}\err{$\pm0.039$} & \main{$0.427$}\err{$\pm0.082$} & \main{$0.313$}\err{$\pm0.083$}
+    & \main{$0.703$}\err{$\pm0.043$} & \main{$0.406$}\err{$\pm0.083$} & \main{$0.294$}\err{$\pm0.085$} \\[-4pt]
+\multicolumn{2}{c|}{\makecell[l]{{\scriptsize w/o alignment \\[-4pt] \scriptsize (OT+MMD)}}} 
+    & \main{$0.746$}\err{$\pm0.026$} & \main{$0.542$}\err{$\pm0.052$} & \main{$0.471$}\err{$\pm0.065$}
+    & \main{$0.698$}\err{$\pm0.045$} & \main{$0.440$}\err{$\pm0.087$} & \main{$0.348$}\err{$\pm0.088$}
+    & \main{$0.687$}\err{$\pm0.043$} & \main{$0.425$}\err{$\pm0.084$} & \main{$0.325$}\err{$\pm0.084$} \\[-4pt]
+\multicolumn{2}{c|}{\makecell[l]{{\scriptsize simple backbone\\[-4pt] \scriptsize(concat/single interaction)}}} 
+    & \main{$0.739$}\err{$\pm0.025$} & \main{$0.551$}\err{$\pm0.055$} & \main{$0.480$}\err{$\pm0.062$}
+    & \main{$0.687$}\err{$\pm0.040$} & \main{$0.476$}\err{$\pm0.082$} & \main{$0.373$}\err{$\pm0.084$}
+    & \main{$0.692$}\err{$\pm0.041$} & \main{$0.456$}\err{$\pm0.082$} & \main{$0.351$}\err{$\pm0.085$} \\[-4pt]
+\multicolumn{2}{c|}{\makecell[l]{{\scriptsize w/o dual-gate \\[-4pt]  \scriptsize reliability\scriptsize + fallback}}} 
+    & \main{$0.743$}\err{$\pm0.032$} & \main{$0.536$}\err{$\pm0.057$} & \main{$0.458$}\err{$\pm0.065$}
+    & \main{$0.685$}\err{$\pm0.046$} & \main{$0.431$}\err{$\pm0.088$} & \main{$0.302$}\err{$\pm0.090$}
+    & \main{$0.681$}\err{$\pm0.046$} & \main{$0.419$}\err{$\pm0.087$} & \main{$0.280$}\err{$\pm0.091$} \\
+\hline
+\multicolumn{2}{c|}{{\scriptsize \bfseries Full DRGFuse}} 
+    & {\boldmath\bfseries\main{$0.762$}}{\boldmath\bfseries\err{$\pm0.018$}} & {\boldmath\bfseries\main{$0.602$}}{\boldmath\bfseries\err{$\pm0.042$}} & {\boldmath\bfseries\main{$0.541$}}{\boldmath\bfseries\err{$\pm0.050$}}
+    & {\boldmath\bfseries\main{$0.720$}}{\boldmath\bfseries\err{$\pm0.039$}} & {\boldmath\bfseries\main{$0.542$}}{\boldmath\bfseries\err{$\pm0.069$}} & {\boldmath\bfseries\main{$0.456$}}{\boldmath\bfseries\err{$\pm0.072$}}
+    & {\boldmath\bfseries\main{$0.713$}}{\boldmath\bfseries\err{$\pm0.044$}} & {\boldmath\bfseries\main{$0.525$}}{\boldmath\bfseries\err{$\pm0.072$}} & {\boldmath\bfseries\main{$0.433$}}{\boldmath\bfseries\err{$\pm0.068$}} \\
+\hline
+\end{tabular}
+}
+\end{table}

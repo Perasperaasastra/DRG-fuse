@@ -1,0 +1,32 @@
+\begin{table}[htbp]
+\centering
+\caption{\textbf{Comparison of single-modality baselines and our full method on all metrics.}}
+\label{tab:full_comp}
+\small
+\setlength{\tabcolsep}{0.8pt}
+\newcommand{\main}[1]{{\fontsize{8}{9.6}\selectfont #1}}
+\newcommand{\err}[1]{{\fontsize{5}{6}\selectfont \raisebox{0.2ex}{#1}}}
+\makebox[\textwidth][c]{
+\begin{tabular}{c c|ccc|ccc|ccc}
+\hline
+\multicolumn{2}{c|}{\multirow{2}{*}{{\scriptsize \textbf{Method}}}} & \multicolumn{3}{c|}{{\scriptsize \textbf{Internal}}} & \multicolumn{3}{c|}{{\scriptsize \textbf{External A}}} & \multicolumn{3}{c}{{\scriptsize \textbf{External B}}} \\
+\cline{3-11}
+\multicolumn{2}{c|}{} & {\scriptsize \textbf{AUC $\uparrow$}} & {\scriptsize \textbf{pAUCn $\uparrow$}} & {\scriptsize \textbf{TPR@Sp95 $\uparrow$}} & {\scriptsize \textbf{AUC $\uparrow$}} & {\scriptsize \textbf{pAUCn $\uparrow$}} & {\scriptsize \textbf{TPR@Sp95 $\uparrow$}} & {\scriptsize \textbf{AUC $\uparrow$}} & {\scriptsize \textbf{pAUCn $\uparrow$}} & {\scriptsize \textbf{TPR@Sp95 $\uparrow$}} \\
+\hline
+\multicolumn{2}{c|}{\makecell[l]{\textbf{\scriptsize CT-ONLY}}}
+    & \main{$0.671$}\err{$\pm0.030$} & \main{$0.395$}\err{$\pm0.051$} & \main{$0.300$}\err{$\pm0.062$}
+    & \main{$0.633$}\err{$\pm0.054$} & \main{$0.332$}\err{$\pm0.080$} & \main{$0.252$}\err{$\pm0.079$}
+    & \main{$0.620$}\err{$\pm0.051$} & \main{$0.320$}\err{$\pm0.068$} & \main{$0.242$}\err{$\pm0.072$} \\
+\multicolumn{2}{c|}{\makecell[l]{\textbf{\scriptsize WSI-ONLY}}}
+    & \main{$0.692$}\err{$\pm0.033$} & \main{$0.424$}\err{$\pm0.047$} & \main{$0.331$}\err{$\pm0.060$}
+    & \main{$0.641$}\err{$\pm0.056$} & \main{$0.354$}\err{$\pm0.081$} & \main{$0.270$}\err{$\pm0.075$}
+    & \main{$0.638$}\err{$\pm0.062$} & \main{$0.330$}\err{$\pm0.082$} & \main{$0.251$}\err{$\pm0.079$} \\
+\hline
+\multicolumn{2}{c|}{\makecell[l]{\scriptsize \textbf{Full DRGFuse}}}
+    & \main{$\mathbf{0.762}$}\err{$\mathbf{\pm0.018}$} & \main{$\mathbf{0.602}$}\err{$\mathbf{\pm0.042}$} & \main{$\mathbf{0.541}$}\err{$\mathbf{\pm0.050}$}
+    & \main{$\mathbf{0.720}$}\err{$\mathbf{\pm0.039}$} & \main{$\mathbf{0.542}$}\err{$\mathbf{\pm0.069}$} & \main{$\mathbf{0.456}$}\err{$\mathbf{\pm0.072}$}
+    & \main{$\mathbf{0.713}$}\err{$\mathbf{\pm0.044}$} & \main{$\mathbf{0.525}$}\err{$\mathbf{\pm0.072}$} & \main{$\mathbf{0.433}$}\err{$\mathbf{\pm0.068}$} \\
+\hline
+\end{tabular}
+}
+\end{table}
