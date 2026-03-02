@@ -163,10 +163,5 @@ python scripts/infer.py --checkpoint checkpoints/toy_model.pt --data_root data/e
 
 - No raw clinical data, training logs, caches, or large weights are included.
 - This snapshot contains **no `.git` history** and no CI configuration (`.github/` is excluded).
-- Run a final scan before pushing:
-
-```bash
-python scripts/sanitize_scan.py --root . --fail_on_findings
-```
 
 For additional details, see `REPRODUCIBILITY.md`.
