@@ -115,9 +115,9 @@ python scripts/eval.py --config configs/your_config.yaml --checkpoint <BEST_CHEC
 
 Manuscript tables:
 
-- `assets/tables/table1.tex`
-- `assets/tables/table2.tex`
-- `assets/tables/table3.tex`
+- `assets/tables/table1.md`
+- `assets/tables/table2.md`
+- `assets/tables/table3.md`
 
 Supplementary calibration tables:
 
