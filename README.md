@@ -38,7 +38,7 @@ Therefore, this snapshot focuses on **feature-level fusion** (pre-extracted CT/W
    - `data/example/` (toy sample features)
 
 6. **Experimental results tables (from the manuscript)**  
-   - `assets/tables/table1.tex`, `assets/tables/table2.tex`, `assets/tables/table3.tex`  
+   - `assets/tables/table1.md`, `assets/tables/table2.md`, `assets/tables/table3.md`  
    - `assets/tables/supplementary/*.md`
 
 7. **Visualization results**  
@@ -66,9 +66,9 @@ DRGFuse_anon/
 │       │   ├── calibration_ct.md
 │       │   ├── calibration_fusion.md
 │       │   └── calibration_wsi.md
-│       ├── table1.tex
-│       ├── table2.tex
-│       └── table3.tex
+│       ├── table1.md
+│       ├── table2.md
+│       └── table3.md
 ├── checkpoints
 │   └── README.md
 ├── configs
